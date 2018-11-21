@@ -444,5 +444,4 @@
 ))
 (:metric minimize (+ (total-time)
                      (*(total-distance) 5)))
-;(:metric minimize (total-time))
 )
