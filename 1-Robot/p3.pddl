@@ -2,7 +2,7 @@
 (:domain environment_complex)
 (:objects
     ob_0 ob_1 ob_2 ob_3 ob_4 ob_5 ob_6 - observation_point
-    explorer_1 - robot_explorer
+    r_1 - robot
     wp0 wp1 wp2 wp3 wp4 wp5 wp6 wp7 wp8 wp9 wp10 wp11 wp12 wp13 wp14 wp15 wp16 wp17 wp18 - waypoint
     camera scan - sensors
 )
@@ -16,13 +16,13 @@
     (observation_at ob_4 wp18)
     (observation_at ob_5 wp14)
     (observation_at ob_6 wp15)
-    (robot_explorer_at explorer_1 wp0)
-    (undocked_explorer explorer_1)
+    (robot_at r_1 wp0)
+    (undocked r_1)
     (camera_free camera)
     (scan_sensor_free scan)
-    (available explorer_1)
-    (robot_capable explorer_1)
-    (= (consumption_rate_explorer explorer_1) 1.5)
+    (available r_1)
+    (robot_capable r_1)
+    (= (consumption_rate r_1) 1.5)
     (= (distance wp0 wp0) 0)
     (= (distance wp0 wp1) 6)
     (= (distance wp0 wp10) 13)
@@ -384,10 +384,10 @@
     (= (distance wp9 wp7) 10.0499)
     (= (distance wp9 wp8) 6.32456)
     (= (distance wp9 wp9) 0)
-    (= (energy_capacity_explorer explorer_1) 100)
-    (= (energy_explorer explorer_1) 100)
-    (= (image_data explorer_1) 0)
-    (= (image_data_capacity explorer_1) 40)
+    (= (energy_capacity r_1) 100)
+    (= (energy r_1) 100)
+    (= (image_data r_1) 0)
+    (= (image_data_capacity r_1) 40)
     (= (observation_point_need_data ob_0) 5)
     (= (observation_point_need_data ob_1) 6)
     (= (observation_point_need_data ob_2) 0)
@@ -402,8 +402,8 @@
     (= (observation_point_need_image ob_4) 15)
     (= (observation_point_need_image ob_5) 0)
     (= (observation_point_need_image ob_6) 15)
-    (= (sample_data explorer_1) 0)
-    (= (sample_data_capacity explorer_1) 20)
+    (= (sample_data r_1) 0)
+    (= (sample_data_capacity r_1) 20)
     (= (total-distance) 0)
 )
 ; =============================================================================================
@@ -446,5 +446,4 @@
 ))
 (:metric minimize (+ (total-time)
                      (*(total-distance) 5)))
-;(:metric minimize (total-time))
 )
